@@ -1,0 +1,393 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta name='viewport'
+        content='width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover' />
+    <meta charset='utf-8'>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <style></style>
+    <title>CD Configurator</title>
+</head>
+
+<script>
+
+  
+    function showCD() {
+        var iframe = document.getElementById("ifrm");
+        iframe.contentWindow.postMessage("showCD", "https://playcanv.as");
+        document.querySelectorAll('h2')[0].innerText = 'Format : Vinyle';
+    
+        var change2Elements = document.querySelectorAll('.change2');
+        for (var i = 0; i < change2Elements.length; i++) {
+            change2Elements[i].style.display = 'none';
+        }
+    
+        var changeElements = document.querySelectorAll('.change');
+        for (var j = 1; j < changeElements.length; j++) {
+            changeElements[j].style.display = 'grid';
+        }
+
+    }
+    
+    function showVinyl() {
+        var iframe = document.getElementById("ifrm");
+        iframe.contentWindow.postMessage("showVinyl", "https://playcanv.as");
+        document.querySelectorAll('h2')[0].innerText = 'Format : CD';
+    
+        var change2Elements = document.querySelectorAll('.change2');
+        for (var i = 0; i < change2Elements.length; i++) {
+            change2Elements[i].style.display = 'grid';
+        }
+    
+        var changeElements = document.querySelectorAll('.change');
+        for (var j = 1; j < changeElements.length; j++) {
+            changeElements[j].style.display = 'none';
+        }
+
+    }
+    
+
+    function reset() {
+        var iframe = document.getElementById("ifrm");
+        iframe.contentWindow.postMessage("reset", "https://playcanv.as");
+        document.querySelectorAll('h2')[1].innerText = `Pochette face : `;
+        document.querySelectorAll('h2')[2].innerText = `CD : `;
+        document.querySelectorAll('h2')[3].innerText = `Pochette arrière : `;
+    }
+
+
+
+    function Face_face1et2() {
+        var iframe = document.getElementById("ifrm");
+        iframe.contentWindow.postMessage("Face_face1et2", "https://playcanv.as");
+        document.querySelectorAll('h2')[1].innerText = `Pochette face : Poésie d'une pulsion 1 et 2 `;
+    }
+
+    function CD_face1et2() {
+        var iframe = document.getElementById("ifrm");
+        iframe.contentWindow.postMessage("CD_face1et2", "https://playcanv.as");
+        document.querySelectorAll('h2')[2].innerText = `CD : Poésie d'une pulsion 1 et 2`;
+    }
+
+    function Arriere_arriere1et2() {
+        var iframe = document.getElementById("ifrm");
+        iframe.contentWindow.postMessage("Arriere_arriere1et2", "https://playcanv.as");
+        document.querySelectorAll('h2')[3].innerText = `Pochette arrière : Poésie d'une pulsion 1 et 2`;
+    }
+
+    function Face_face1() {
+        var iframe = document.getElementById("ifrm");
+        iframe.contentWindow.postMessage("Face_face1", "https://playcanv.as");
+        document.querySelectorAll('h2')[1].innerText = `Pochette face : Poésie d'une pulsion 1`;
+
+    }
+
+    function CD_face1() {
+        var iframe = document.getElementById("ifrm");
+        iframe.contentWindow.postMessage("CD_face1", "https://playcanv.as");
+        document.querySelectorAll('h2')[2].innerText = `CD : Poésie d'une pulsion 1`;
+    }
+
+    function Arriere_arriere1() {
+        var iframe = document.getElementById("ifrm");
+        iframe.contentWindow.postMessage("Arriere_arriere1", "https://playcanv.as");
+        document.querySelectorAll('h2')[3].innerText = `Pochette arrière : Poésie d'une pulsion 1`;
+    }
+
+    function Face_face2() {
+        var iframe = document.getElementById("ifrm");
+        iframe.contentWindow.postMessage("Face_face2", "https://playcanv.as");
+        document.querySelectorAll('h2')[1].innerText = `Pochette face : Poésie d'une pulsion 2`;
+    }
+
+    function CD_face2() {
+        var iframe = document.getElementById("ifrm");
+        iframe.contentWindow.postMessage("CD_face2", "https://playcanv.as");
+        document.querySelectorAll('h2')[2].innerText = `CD : Poésie d'une pulsion 2`;
+    }
+
+    function Arriere_arriere2() {
+        var iframe = document.getElementById("ifrm");
+        iframe.contentWindow.postMessage("Arriere_arriere2", "https://playcanv.as");
+        document.querySelectorAll('h2')[3].innerText = `Pochette arrière : Poésie d'une pulsion 2`;
+    }
+
+    function cd_pdp1() {
+        var iframe = document.getElementById("ifrm");
+        iframe.contentWindow.postMessage("cd_pdp1", "https://playcanv.as");
+        document.querySelectorAll('h2')[1].innerText = `CD : Poésie d'une pulsion 1`;
+    }
+
+    function cd_pdp2() {
+        var iframe = document.getElementById("ifrm");
+        iframe.contentWindow.postMessage("cd_pdp2", "https://playcanv.as");
+        document.querySelectorAll('h2')[1].innerText = `CD : Poésie d'une pulsion 2`;
+    }
+
+    function cd_pdp3() {
+        var iframe = document.getElementById("ifrm");
+        iframe.contentWindow.postMessage("cd_pdp3", "https://playcanv.as");
+        document.querySelectorAll('h2')[1].innerText = `CD : Poésie d'une pulsion 1 et 2`;
+    }
+
+
+
+
+    function pochette_pdp1pdp1() {
+        var iframe = document.getElementById("ifrm");
+        iframe.contentWindow.postMessage("pochette_pdp1pdp1", "https://playcanv.as");
+        document.querySelectorAll('h2')[2].innerText = `Pochette : Poésie d'une pulsion 1 et Poésie d'une pulsion 1`;
+    }
+
+    function pochette_pdp1pdp2() {
+        var iframe = document.getElementById("ifrm");
+        iframe.contentWindow.postMessage("pochette_pdp1pdp2", "https://playcanv.as");
+        document.querySelectorAll('h2')[2].innerText = `Pochette : Poésie d'une pulsion 1 et Poésie d'une pulsion 2`;
+    }
+
+    function pochette_pdp1pdp3() {
+        var iframe = document.getElementById("ifrm");
+        iframe.contentWindow.postMessage("pochette_pdp1pdp3", "https://playcanv.as");
+        document.querySelectorAll('h2')[2].innerText = `Pochette : Poésie d'une pulsion 1 et Poésie d'une pulsion 1 et 2`;
+    }
+
+    function pochette_pdp2pdp1() {
+        var iframe = document.getElementById("ifrm");
+        iframe.contentWindow.postMessage("pochette_pdp2pdp1", "https://playcanv.as");
+        document.querySelectorAll('h2')[2].innerText = `Pochette : Poésie d'une pulsion 2 et Poésie d'une pulsion 2`;
+    }
+
+    function pochette_pdp2pdp2() {
+        var iframe = document.getElementById("ifrm");
+        iframe.contentWindow.postMessage("pochette_pdp2pdp2", "https://playcanv.as");
+        document.querySelectorAll('h2')[2].innerText = `Pochette : Poésie d'une pulsion 2 et Poésie d'une pulsion 2`;
+    }
+
+    function pochette_pdp2pdp3() {
+        var iframe = document.getElementById("ifrm");
+        iframe.contentWindow.postMessage("pochette_pdp2pdp3", "https://playcanv.as");
+        document.querySelectorAll('h2')[2].innerText = `Pochette : Poésie d'une pulsion 2 et Poésie d'une pulsion 1 et 2`;
+    }
+
+    function pochette_pdp3pdp1() {
+        var iframe = document.getElementById("ifrm");
+        iframe.contentWindow.postMessage("pochette_pdp3pdp1", "https://playcanv.as");
+        document.querySelectorAll('h2')[2].innerText = `Pochette : Poésie d'une pulsion 1 et 2 et Poésie d'une pulsion 1`;
+    }
+
+    function pochette_pdp3pdp2() {
+        var iframe = document.getElementById("ifrm");
+        iframe.contentWindow.postMessage("pochette_pdp3pdp2", "https://playcanv.as");
+        document.querySelectorAll('h2')[2].innerText = `Pochette : Poésie d'une pulsion 1 et 2 et Poésie d'une pulsion 2`;
+    }
+
+    function pochette_pdp3pdp3() {
+        var iframe = document.getElementById("ifrm");
+        iframe.contentWindow.postMessage("pochette_pdp3pdp2", "https://playcanv.as");
+        document.querySelectorAll('h2')[2].innerText = `Pochette : Poésie d'une pulsion 1 et 2 et Poésie d'une pulsion 1 et 2`;
+    }
+
+
+
+    function donut_arrierepdp1() {
+        var iframe = document.getElementById("ifrm");
+        iframe.contentWindow.postMessage("donut_arrierepdp1", "https://playcanv.as");
+        document.querySelectorAll('h2')[3].innerText = `Étiquette centrale : Arrière - Poésie d'une pulsion 1`;
+    }
+
+    function donut_arrierepdp2() {
+        var iframe = document.getElementById("ifrm");
+        iframe.contentWindow.postMessage("donut_arrierepdp2", "https://playcanv.as");
+        document.querySelectorAll('h2')[3].innerText = `Étiquette centrale : Arrière - Poésie d'une pulsion 2`;
+    }
+
+    function donut_arrierepdp3() {
+        var iframe = document.getElementById("ifrm");
+        iframe.contentWindow.postMessage("donut_arrierepdp3", "https://playcanv.as");
+        document.querySelectorAll('h2')[3].innerText = `Étiquette centrale : Arrière - Poésie d'une pulsion 3`;
+    }
+
+    function donut_facepdp1() {
+        var iframe = document.getElementById("ifrm");
+        iframe.contentWindow.postMessage("donut_facepdp1", "https://playcanv.as");
+        document.querySelectorAll('h2')[3].innerText = `Étiquette centrale : Face - Poésie d'une pulsion 1`;
+    }
+
+    function donut_facepdp2() {
+        var iframe = document.getElementById("ifrm");
+        iframe.contentWindow.postMessage("donut_facepdp2", "https://playcanv.as");
+        document.querySelectorAll('h2')[3].innerText = `Étiquette centrale : Face - Poésie d'une pulsion 2`;
+    }
+
+    function donut_facepdp3() {
+        var iframe = document.getElementById("ifrm");
+        iframe.contentWindow.postMessage("donut_facepdp3", "https://playcanv.as");
+        document.querySelectorAll('h2')[3].innerText = `Étiquette centrale : Face - Poésie d'une pulsion 3`;
+    }
+
+
+
+
+</script>
+
+
+
+
+<body>
+    <main>
+        <section>
+            <div>
+                <i class="fa-solid fa-bars fa-lg"></i>
+                <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+            </div>
+            <div>
+                <i class="fa-solid fa-user fa-lg"></i>
+                <i class="fa-solid fa-bag-shopping fa-lg"></i>
+            </div>
+        </section>
+        <section>
+            <p class="loader">Chargement en cours...</p>
+            <iframe class="hide" id="ifrm" frameborder="0" src="https://playcanv.as/e/b/bc20204e"> </iframe>
+        </section>
+        <section>
+            <p class="infos"><a href="#"><i class="fa-solid fa-arrow-left" style="color: #bdbbc8;"></i>Retour au
+                    catalogue</a></p>
+            <p class="infos">B.B Jacques</p>
+            <h1>ALBUM : Poésie d'une pulsion</h1>
+            <p class="price">20€</p>
+            <div class="refs">
+                <p class="infos">Référence : AAA</p>
+                <div class="notes">
+                    <div>
+                        <i class="fa-solid fa-star" style="color: #f75e62;"></i>
+                        <i class="fa-solid fa-star" style="color: #f75e62;"></i>
+                        <i class="fa-solid fa-star" style="color: #f75e62;"></i>
+                        <i class="fa-solid fa-star" style="color: #f75e62;"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p><a href="#">10</a></p>
+                </div>
+            </div>
+            <div class="change">
+                <img onclick="showCD()" src="./src/cd.png" alt="CD">
+                <img onclick="showVinyl()" src="./src/vinyle.png" alt="Vinyle">
+                <i class="fa-solid fa-arrows-rotate fa-2xl" onclick="reset()"></i>
+            </div>
+            </div>
+            <h2>Format : CD</h2>
+            <div class="change">
+                <img onclick="Face_face1()" src="./src/pdp1.jpg" alt="Poésie d'une pulsion 1">
+                <img onclick="Face_face2()" src="./src/pdp2.jpg" alt="Poésie d'une pulsion 2">
+                <img onclick="Face_face1et2()" src="./src/pdp1et2.jpg" alt="Poésie d'une pulsion 1 et 2">
+            </div>
+
+            <div class="change2" style="display: none;">
+                <img onclick="cd_pdp1()" src="./src/pdp1.jpg" alt="Poésie d'une pulsion 1">
+                <img onclick="cd_pdp2()" src="./src/pdp2.jpg" alt="Poésie d'une pulsion 2">
+                <img onclick="cd_pdp3()" src="./src/pdp1et2.jpg" alt="Poésie d'une pulsion 1 et 2">
+            </div>
+
+            <h2>Pochette face : </h2>
+            <div class="change">
+                <img onclick="CD_face1()" src="./src/pdp1.jpg" alt="Poésie d'une pulsion 1">
+                <img onclick="CD_face2()" src="./src/pdp2.jpg" alt="Poésie d'une pulsion 2">
+                <img onclick="CD_face1et2()" src="./src/pdp1et2.jpg" alt="Poésie d'une pulsion 1 et 2">
+            </div>
+            <div class="change2" style="display: none;">
+                <img onclick="pochette_pdp1pdp1()" src="./src/pdp1pdp1.png" alt="Poésie d'une pulsion 1 et Poésie d'une pulsion 1">
+                <img onclick="pochette_pdp1pdp2()" src="./src/pdp1pdp2.png" alt="Poésie d'une pulsion 1 et Poésie d'une pulsion 2">
+                <img onclick="pochette_pdp1pdp3()" src="./src/pdp1pdp3.png" alt="Poésie d'une pulsion 1 et Poésie d'une pulsion 1 et 2">
+                <img onclick="pochette_pdp2pdp1()" src="./src/pdp2pdp1.png" alt="Poésie d'une pulsion 2 et Poésie d'une pulsion 1">
+                <img onclick="pochette_pdp2pdp2()" src="./src/pdp2pdp2.png" alt="Poésie d'une pulsion 2 et Poésie d'une pulsion 2">
+                <img onclick="pochette_pdp2pdp3()" src="./src/pdp2pdp3.png" alt="Poésie d'une pulsion 2 et Poésie d'une pulsion 1 et 2">
+                <img onclick="pochette_pdp3pdp1()" src="./src/pdp3pdp1.png" alt="Poésie d'une pulsion 1 et 2 et Poésie d'une pulsion 1">
+                <img onclick="pochette_pdp3pdp2()" src="./src/pdp3pdp2.png" alt="Poésie d'une pulsion 1 et 2 et Poésie d'une pulsion 2">
+                <img onclick="pochette_pdp3pdp3()" src="./src/pdp3pdp3.png" alt="Poésie d'une pulsion 1 et 2 et Poésie d'une pulsion 1 et 2">
+            </div>
+            <h2>CD : </h2>
+            <div class="change">
+                <img onclick="Arriere_arriere1()" src="./src/back_pdp1.jpg" alt="Poésie d'une pulsion 1">
+                <img onclick="Arriere_arriere2()" src="./src/back_pdp2.jpg" alt="Poésie d'une pulsion 2">
+                <img onclick="Arriere_arriere1et2()" src="./src/back_pdp1et2.jpg" alt="Poésie d'une pulsion 1 et 2">
+            </div>
+            <div class="change2" style="display: none;">
+                <img onclick="donut_facepdp1()" src="./src/pdp1.jpg" alt="Poésie d'une pulsion 1">
+                <img onclick="donut_facepdp2()" src="./src/pdp2.jpg" alt="Poésie d'une pulsion 2">
+                <img onclick="donut_facepdp3()" src="./src/pdp1et2.jpg" alt="Poésie d'une pulsion 1 et 2">
+                <img onclick="donut_arrierepdp1()" src="./src/back_pdp1.jpg" alt="Poésie d'une pulsion 1">
+                <img onclick="donut_arrierepdp2()" src="./src/back_pdp2.jpg" alt="Poésie d'une pulsion 2">
+                <img onclick="donut_arrierepdp3()" src="./src/back_pdp1et2.jpg" alt="Poésie d'une pulsion 1 et 2">
+            </div>
+
+            <h2>Pochette arrière : </h2>
+
+            <a class="add" href="#">Ajouter au panier</a>
+
+        </section>
+    </main>
+</body>
+
+<script>
+    const hide = document.querySelector('.hide');
+    const loader = document.querySelector('.loader');   
+    hide.style.display = 'none';
+
+
+
+    var iframe = document.getElementById('ifrm');
+    var loader2 = document.querySelector('.loader');
+
+    window.addEventListener('load', function() {
+        hide.style.display = 'block';
+        hide.style.height = '100%';
+        loader.style.display = 'none';
+    });
+
+
+    const img = document.querySelectorAll('.change img, .change2 img');
+    console.log(img);
+
+    img.forEach((image) => {
+        image.addEventListener('mouseover', (event) => {
+          const altText = event.target.alt;
+          const paragraph = document.createElement('p');
+          paragraph.textContent = altText;
+          event.target.parentNode.appendChild(paragraph);
+      
+          const parentDiv = event.target.parentNode;
+          const images = parentDiv.querySelectorAll('img');
+          console.log(images.length);
+          if (images.length === 9) {
+            paragraph.style.bottom = '175px';
+          } else if (images.length === 6) {
+            paragraph.style.bottom = '115px';
+          }else{
+            paragraph.style.bottom = '55px';
+          }
+        });
+      
+        image.addEventListener('mouseout', (event) => {
+          const paragraph = event.target.parentNode.querySelector('p');
+          if (paragraph) {
+            paragraph.remove();
+          }
+        });
+      });
+      
+    
+
+
+  
+    
+</script>
+</html>
